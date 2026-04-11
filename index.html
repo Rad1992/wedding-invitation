@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mariage Assia & Radouane · 11 Juillet 2026</title>
+<meta name="description" content="Vous êtes cordialement invités au mariage d'Assia et Radouane, le 11 juillet 2026 au Tifawin Resort, Khenifra, Maroc."/>
+<style>
+:root {
+  --sage:      #7A9E7E;
+  --sage-d:    #4A7A52;
+  --sage-dk:   #2C5238;
+  --sage-l:    #A8C4AB;
+  --ivory:     #FAF8F2;
+  --ivory-d:   #F0EBE0;
+  --champagne: #E8D5B0;
+  --champ-d:   #C9A96E;
+  --champ-dk:  #8B6914;
+  --white:     #FFFFFF;
+  --text-dk:   #2C3E2D;
+  --text-md:   #4A6741;
+  --text-lt:   #7A9E7E;
+  --border:    #D6C9A8;
+  --border-lt: #EAE3D4;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;background:var(--ivory);color:var(--text-dk)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 52px;border-bottom:0.5px solid var(--border);background:var(--ivory);position:sticky;top:0;z-index:100}
+.nav-logo{font-size:13px;letter-spacing:5px;color:var(--sage-d);font-style:italic}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:9.5px;letter-spacing:2px;color:var(--text-md);text-decoration:none;text-transform:uppercase;cursor:pointer;transition:color .2s}
+.nav-links a:hover{color:var(--sage-dk)}
+.lang-sw{display:flex;gap:5px;margin-left:14px;border-left:0.5px solid var(--border);padding-left:14px}
+.lang-btn{font-size:9px;letter-spacing:1px;background:none;border:0.5px solid var(--border);color:var(--text-lt);padding:4px 8px;cursor:pointer;font-family:inherit;text-transform:uppercase;transition:all .2s}
+.lang-btn.active{background:var(--sage-dk);color:var(--ivory);border-color:var(--sage-dk)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger span{width:22px;height:0.5px;background:var(--text-dk);display:block}
+.btn-dark{background:var(--sage-dk);color:var(--ivory);border:none;padding:13px 38px;font-family:inherit;font-size:10px;letter-spacing:3px;cursor:pointer;text-transform:uppercase;transition:background .25s}
+.btn-dark:hover{background:var(--sage-d)}
+.btn-out{background:transparent;color:var(--text-dk);border:0.5px solid var(--champ-d);padding:12px 28px;font-family:inherit;font-size:10px;letter-spacing:3px;cursor:pointer;text-transform:uppercase;transition:all .25s}
+.btn-out:hover{background:var(--champagne)}
+.sep{display:flex;align-items:center;gap:10px;justify-content:center;margin:16px 0}
+.sl{height:0.5px;width:60px;background:var(--champ-d)}
+.sd{width:6px;height:6px;background:var(--champ-d);transform:rotate(45deg)}
+.sec-lbl{font-size:9.5px;letter-spacing:4px;color:var(--text-lt);text-align:center;margin-bottom:16px;text-transform:uppercase}
+
+/* HERO */
+#hero{text-align:center;padding:72px 48px 56px;border-bottom:0.5px solid var(--border-lt);background:var(--ivory)}
+#hero h1{font-size:clamp(50px,10vw,76px);font-style:italic;font-weight:300;color:var(--sage-dk);line-height:1.02}
+.amp{font-size:19px;color:var(--champ-d);letter-spacing:6px;margin:4px 0}
+.hero-sub{font-size:9.5px;letter-spacing:4px;color:var(--text-lt);margin-bottom:12px}
+.hero-date{font-size:11.5px;color:var(--text-md);letter-spacing:3px;margin-bottom:5px}
+.hero-venue{font-size:11.5px;color:var(--text-md);letter-spacing:2px;margin-bottom:36px}
+.hero-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* COUNTDOWN */
+#countdown-sec{padding:56px 48px;text-align:center;border-bottom:0.5px solid var(--border-lt);background:var(--white)}
+.cd-wrap{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cbox{background:var(--ivory);border:0.5px solid var(--champagne);padding:18px 22px;text-align:center;min-width:78px}
+.cbox-num{font-size:40px;font-style:italic;color:var(--sage-dk);line-height:1}
+.cbox-lbl{font-size:9px;letter-spacing:2px;color:var(--text-lt);margin-top:5px}
+
+/* STORY */
+#story{padding:68px 48px;text-align:center;border-bottom:0.5px solid var(--border-lt);background:var(--ivory-d)}
+.story-inner{max-width:600px;margin:0 auto}
+#story h2{font-size:27px;font-style:italic;font-weight:300;color:var(--sage-dk);margin-bottom:16px}
+#story p{font-size:13.5px;line-height:1.95;color:var(--text-md);margin-bottom:16px}
+#story .sig{font-size:13px;font-style:italic;color:var(--champ-dk)}
+
+/* DETAILS */
+#details{padding:64px 0;border-bottom:0.5px solid var(--border-lt);background:var(--white)}
+.det-inner{max-width:860px;margin:0 auto;padding:0 32px}
+.top-cards{display:flex;gap:0;flex-wrap:wrap;margin-bottom:44px}
+.icard{background:var(--white);border:0.5px solid var(--border-lt);padding:26px 22px;text-align:center;flex:1;min-width:180px}
+.icard+.icard{border-left:none}
+.icard-lbl{font-size:9px;letter-spacing:3px;color:var(--text-lt);margin-bottom:7px;margin-top:10px;text-transform:uppercase}
+.icard-main{font-size:15px;font-style:italic;color:var(--sage-dk);margin-bottom:3px}
+.icard-sub{font-size:11px;color:var(--text-md)}
+
+/* Program */
+.prog-block{background:var(--ivory);border:0.5px solid var(--border);padding:34px 38px;margin-bottom:30px}
+.prog-title{font-size:9.5px;letter-spacing:3px;color:var(--text-lt);margin-bottom:22px;text-align:center}
+.prog-row{display:flex;gap:18px;align-items:flex-start;padding:8px 0;border-bottom:0.5px solid var(--border-lt)}
+.prog-row:last-child{border-bottom:none}
+.p-time{font-size:11.5px;color:var(--champ-dk);letter-spacing:1px;min-width:68px;font-style:italic;padding-top:1px}
+.p-event{font-size:13px;color:var(--text-dk)}
+.p-note{font-size:10.5px;color:var(--text-lt);font-style:italic;margin-top:1px}
+.prayer-row{font-size:10px;color:#b0b0a8;font-style:italic;padding:3px 0 4px 86px}
+
+/* Info cards */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.info-card{background:var(--ivory);border:0.5px solid var(--border);padding:22px 20px}
+.info-card-hd{font-size:9px;letter-spacing:2.5px;color:var(--text-lt);margin-bottom:9px;text-transform:uppercase;display:flex;align-items:center;gap:7px}
+.info-card-body{font-size:12.5px;color:var(--text-md);line-height:1.85}
+.info-card-body em{color:var(--sage-dk);font-style:italic}
+
+/* LIEU */
+#lieu{padding:62px 48px;text-align:center;border-bottom:0.5px solid var(--border-lt);background:var(--ivory-d)}
+#lieu h2{font-size:26px;font-style:italic;font-weight:300;color:var(--sage-dk);margin-bottom:8px}
+.map-link{display:inline-flex;align-items:center;gap:10px;border:0.5px solid var(--champ-d);padding:12px 28px;color:var(--text-dk);text-decoration:none;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;transition:all .25s}
+.map-link:hover{background:var(--champagne)}
+
+/* INV GEN */
+#inv-gen{padding:62px 48px;background:var(--white);border-bottom:0.5px solid var(--border-lt)}
+.inv-form{max-width:490px;margin:0 auto}
+.inv-form input,.inv-form select{width:100%;padding:11px 14px;border:none;border-bottom:0.5px solid var(--champ-d);font-family:inherit;font-size:13.5px;background:var(--ivory);color:var(--text-dk);outline:none;margin-bottom:10px;appearance:none}
+.inv-form input:focus,.inv-form select:focus{border-bottom-color:var(--sage-dk)}
+.inv-row{display:flex;gap:10px;margin-bottom:4px}
+.inv-preview{background:var(--ivory);border:0.5px solid var(--champagne);padding:30px 26px;text-align:center;margin-top:18px}
+.pre-greet{font-size:10px;letter-spacing:3px;color:var(--text-lt);margin-bottom:7px}
+.pre-name{font-size:21px;font-style:italic;color:var(--sage-dk);margin-bottom:5px}
+.pre-line{height:0.5px;background:var(--champ-d);margin:9px auto;width:170px}
+.pre-body{font-size:12.5px;color:var(--text-md);line-height:1.85}
+.pre-sig{font-size:17px;font-style:italic;color:var(--sage-dk);margin-top:14px;margin-bottom:3px}
+.pre-info{font-size:9.5px;letter-spacing:2px;color:var(--text-lt)}
+.inv-acts{display:flex;gap:10px;margin-top:13px}
+.inv-acts button{flex:1}
+#copy-msg{font-size:11px;color:var(--text-lt);text-align:center;margin-top:7px;min-height:16px}
+
+/* RSVP */
+#rsvp{padding:70px 48px;text-align:center;background:var(--ivory-d)}
+#rsvp h2{font-size:29px;font-style:italic;font-weight:300;color:var(--sage-dk);margin-bottom:8px}
+.rsvp-sub{font-size:13px;color:var(--text-md);margin-bottom:28px;line-height:1.9}
+.rsvp-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+/* FOOTER */
+footer{padding:22px 48px;display:flex;justify-content:space-between;align-items:center;background:var(--white);border-top:0.5px solid var(--border);flex-wrap:wrap;gap:10px}
+footer p{font-size:9.5px;letter-spacing:2px;color:var(--text-lt)}
+
+/* MODAL */
+.overlay{display:none;position:absolute;top:0;left:0;width:100%;background:rgba(20,36,18,0.58);z-index:200;justify-content:center;align-items:flex-start;padding:58px 18px;min-height:100%}
+.overlay.show{display:flex}
+.modal{background:var(--ivory);border:0.5px solid var(--champagne);padding:34px 30px;max-width:450px;width:100%;position:relative}
+.modal h3{font-size:19px;font-style:italic;font-weight:300;color:var(--sage-dk);margin-bottom:5px}
+.modal-sub{font-size:11.5px;color:var(--text-md);margin-bottom:16px;line-height:1.7}
+.close-btn{position:absolute;top:13px;right:16px;cursor:pointer;font-size:17px;color:var(--text-lt);background:none;border:none;font-family:inherit}
+.close-btn:hover{color:var(--sage-dk)}
+.cal-btn{display:flex;align-items:center;gap:11px;border:0.5px solid var(--border-lt);padding:12px 15px;margin-bottom:8px;cursor:pointer;background:var(--white);width:100%;font-family:inherit;font-size:12.5px;color:var(--text-dk);text-decoration:none;transition:all .2s}
+.cal-btn:hover{border-color:var(--sage);background:var(--ivory)}
+.cal-btn-t{font-size:12.5px;color:var(--text-dk)}
+.cal-btn-s{font-size:10.5px;color:var(--text-lt)}
+.modal hr{border:none;border-top:0.5px solid var(--border-lt);margin:14px 0}
+.modal input{width:100%;padding:9px 12px;border:0.5px solid var(--border);font-family:inherit;font-size:12.5px;background:var(--white);color:var(--text-dk);outline:none;margin-bottom:9px}
+.modal input:focus{border-color:var(--sage)}
+#rsvp-msg{font-size:11px;color:var(--text-lt);text-align:center;margin-top:7px;min-height:15px}
+
+/* FLORAL utility */
+.fl-divider{display:block;width:100%;max-width:560px;margin:0 auto}
+
+@media(max-width:640px){
+  nav{padding:13px 16px}
+  .nav-links{display:none;flex-direction:column;gap:14px}
+  .nav-links.open{display:flex;position:absolute;top:50px;left:0;width:100%;background:var(--ivory);padding:18px 22px;border-bottom:0.5px solid var(--border);z-index:99}
+  .hamburger{display:flex}
+  #hero,#countdown-sec,#story,#lieu,#inv-gen,#rsvp{padding:44px 16px}
+  #details{padding:44px 0}
+  .det-inner{padding:0 14px}
+  .prog-block{padding:20px 14px}
+  .top-cards{flex-direction:column}
+  .icard+.icard{border-left:0.5px solid var(--border-lt);border-top:none}
+  .inv-acts{flex-direction:column}
+  footer{padding:16px;justify-content:center;text-align:center}
+  .modal{padding:22px 14px}
+  .prayer-row{padding-left:0}
+}
+</style>
+</head>
+<body>
+
+<!-- MODAL -->
+<div class="overlay" id="cal-overlay">
+  <div class="modal">
+    <button class="close-btn" onclick="closeCalModal()">&#215;</button>
+    <svg class="fl-divider" viewBox="0 0 340 34" style="margin-bottom:12px" aria-hidden="true">
+      <g fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.55"><path d="M10,17 Q85,4 170,17 Q255,30 330,17"/><path d="M10,17 Q85,30 170,17 Q255,4 330,17"/></g>
+      <g fill="#7A9E7E" opacity="0.65"><ellipse cx="170" cy="17" rx="4" ry="7" transform="rotate(-5 170 17)"/><ellipse cx="162" cy="12" rx="3" ry="5" transform="rotate(15 162 12)"/><ellipse cx="178" cy="12" rx="3" ry="5" transform="rotate(-15 178 12)"/><ellipse cx="154" cy="19" rx="7" ry="2.5" transform="rotate(22 154 19)" fill="#A8C4AB"/><ellipse cx="186" cy="19" rx="7" ry="2.5" transform="rotate(-22 186 19)" fill="#A8C4AB"/></g>
+      <g fill="#C9A96E" opacity="0.5"><circle cx="88" cy="16" r="2"/><circle cx="252" cy="16" r="2"/><circle cx="70" cy="18" r="1.5"/><circle cx="270" cy="18" r="1.5"/><polygon points="170,7 172,12 170,17 168,12"/></g>
+    </svg>
+    <h3 data-i18n="m-title">Ajouter à votre calendrier</h3>
+    <p class="modal-sub" id="m-sub-el">Mariage d'Assia &amp; Radouane · Samedi 11 Juillet 2026 à 18h00<br>Tifawin Resort, Khenifra, Maroc</p>
+    <div class="sep"><div class="sl"></div><div class="sd"></div><div class="sl"></div></div>
+    <a class="cal-btn" id="gcal-link" href="#" target="_blank" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2" stroke="#7A9E7E" stroke-width="0.7"/><line x1="2" y1="8" x2="22" y2="8" stroke="#7A9E7E" stroke-width="0.7"/><line x1="7" y1="0" x2="7" y2="5" stroke="#7A9E7E" stroke-width="0.7"/><line x1="17" y1="0" x2="17" y2="5" stroke="#7A9E7E" stroke-width="0.7"/><text x="12" y="18" font-size="6.5" fill="#7A9E7E" text-anchor="middle" font-family="Georgia,serif">G</text></svg>
+      <div><div class="cal-btn-t" data-i18n="m-gcal">Google Calendar</div><div class="cal-btn-s" data-i18n="m-gcal-sub">Ajouter à Google Calendar</div></div>
+    </a>
+    <a class="cal-btn" id="ical-link" href="#" download="mariage-assia-radouane.ics">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2" stroke="#7A9E7E" stroke-width="0.7"/><line x1="2" y1="8" x2="22" y2="8" stroke="#7A9E7E" stroke-width="0.7"/><text x="12" y="18" font-size="5.5" fill="#7A9E7E" text-anchor="middle" font-family="Georgia,serif">iCal</text></svg>
+      <div><div class="cal-btn-t" data-i18n="m-ical">Apple Calendar / iCal</div><div class="cal-btn-s" data-i18n="m-ical-sub">Télécharger le fichier .ics</div></div>
+    </a>
+    <a class="cal-btn" id="outlook-link" href="#" target="_blank" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2" stroke="#7A9E7E" stroke-width="0.7"/><line x1="2" y1="8" x2="22" y2="8" stroke="#7A9E7E" stroke-width="0.7"/><text x="12" y="18" font-size="5" fill="#7A9E7E" text-anchor="middle" font-family="Georgia,serif">OUT</text></svg>
+      <div><div class="cal-btn-t" data-i18n="m-outlook">Outlook Calendar</div><div class="cal-btn-s" data-i18n="m-outlook-sub">Ajouter à Outlook</div></div>
+    </a>
+    <hr/>
+    <p style="font-size:9px;letter-spacing:2px;color:var(--text-lt);margin-bottom:9px" data-i18n="m-rsvp-label">ENVOYER UN EMAIL DE CONFIRMATION</p>
+    <input type="email" id="rsvp-email" placeholder="Votre adresse email"/>
+    <input type="text" id="rsvp-name" placeholder="Votre nom"/>
+    <button class="btn-dark" style="width:100%" onclick="sendRsvpEmail()" data-i18n="m-rsvp-btn">Envoyer ma réponse</button>
+    <p id="rsvp-msg"></p>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">A &amp; R</div>
+  <div class="nav-links" id="nav-links">
+    <a onclick="closeMenu();scrollTo({top:0,behavior:'smooth'})" data-i18n="nav-home">Accueil</a>
+    <a onclick="closeMenu();goTo('details')" data-i18n="nav-details">Détails</a>
+    <a onclick="closeMenu();goTo('lieu')" data-i18n="nav-lieu">Lieu</a>
+    <a onclick="closeMenu();goTo('inv-gen')" data-i18n="nav-inv">Invitations</a>
+    <a onclick="closeMenu();openCalModal()" data-i18n="nav-cal">Calendrier</a>
+    <div class="lang-sw">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <!-- Victorian floral crown -->
+  <svg class="fl-divider" viewBox="0 0 560 82" style="margin-bottom:18px" aria-hidden="true">
+    <g fill="none" stroke="#7A9E7E" stroke-width="0.7" opacity="0.6">
+      <path d="M280,72 Q258,56 238,46 Q218,36 198,39"/><path d="M280,72 Q302,56 322,46 Q342,36 362,39"/>
+      <path d="M238,46 Q222,36 212,24 Q207,16 213,10"/><path d="M322,46 Q338,36 348,24 Q353,16 347,10"/>
+      <path d="M198,39 Q183,30 176,20"/><path d="M362,39 Q377,30 384,20"/>
+      <path d="M280,72 Q280,58 280,46"/>
+    </g>
+    <!-- main roses -->
+    <g opacity="0.88">
+      <circle cx="213" cy="9" r="9" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.6"/>
+      <circle cx="213" cy="9" r="6" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.5"/>
+      <circle cx="213" cy="9" r="3.2" fill="#C9A96E" opacity="0.55"/>
+      <ellipse cx="204" cy="5" rx="5.5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(-28 204 5)"/>
+      <ellipse cx="222" cy="5" rx="5.5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(28 222 5)"/>
+      <ellipse cx="213" cy="2" rx="5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35"/>
+    </g>
+    <g opacity="0.88">
+      <circle cx="347" cy="9" r="9" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.6"/>
+      <circle cx="347" cy="9" r="6" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.5"/>
+      <circle cx="347" cy="9" r="3.2" fill="#C9A96E" opacity="0.55"/>
+      <ellipse cx="338" cy="5" rx="5.5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(-28 338 5)"/>
+      <ellipse cx="356" cy="5" rx="5.5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(28 356 5)"/>
+      <ellipse cx="347" cy="2" rx="5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35"/>
+    </g>
+    <!-- side roses -->
+    <g opacity="0.74"><circle cx="176" cy="18" r="7" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.55"/><circle cx="176" cy="18" r="4.2" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.4"/><circle cx="176" cy="18" r="2" fill="#C9A96E" opacity="0.5"/></g>
+    <g opacity="0.74"><circle cx="384" cy="18" r="7" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.55"/><circle cx="384" cy="18" r="4.2" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.4"/><circle cx="384" cy="18" r="2" fill="#C9A96E" opacity="0.5"/></g>
+    <!-- centre rose -->
+    <g opacity="0.92">
+      <circle cx="280" cy="44" r="11" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.7"/>
+      <circle cx="280" cy="44" r="7.5" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.5"/>
+      <circle cx="280" cy="44" r="4" fill="#C9A96E" opacity="0.55"/>
+      <ellipse cx="270" cy="39" rx="6" ry="3.5" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(-22 270 39)"/>
+      <ellipse cx="290" cy="39" rx="6" ry="3.5" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(22 290 39)"/>
+      <ellipse cx="280" cy="35" rx="6" ry="3.5" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35"/>
+      <ellipse cx="272" cy="49" rx="6" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(18 272 49)"/>
+      <ellipse cx="288" cy="49" rx="6" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.35" transform="rotate(-18 288 49)"/>
+    </g>
+    <!-- leaves -->
+    <g fill="#7A9E7E" opacity="0.52">
+      <ellipse cx="248" cy="54" rx="11" ry="3.5" transform="rotate(34 248 54)"/>
+      <ellipse cx="312" cy="54" rx="11" ry="3.5" transform="rotate(-34 312 54)"/>
+      <ellipse cx="228" cy="42" rx="9" ry="3" transform="rotate(18 228 42)"/>
+      <ellipse cx="332" cy="42" rx="9" ry="3" transform="rotate(-18 332 42)"/>
+      <ellipse cx="194" cy="35" rx="8" ry="2.5" transform="rotate(12 194 35)"/>
+      <ellipse cx="366" cy="35" rx="8" ry="2.5" transform="rotate(-12 366 35)"/>
+    </g>
+    <!-- buds & dots -->
+    <g fill="#C9A96E" opacity="0.45">
+      <ellipse cx="158" cy="26" rx="3" ry="5.5" transform="rotate(-18 158 26)"/>
+      <ellipse cx="402" cy="26" rx="3" ry="5.5" transform="rotate(18 402 26)"/>
+      <circle cx="136" cy="36" r="2.2"/><circle cx="424" cy="36" r="2.2"/>
+      <circle cx="118" cy="44" r="1.6"/><circle cx="442" cy="44" r="1.6"/>
+    </g>
+  </svg>
+
+  <p class="hero-sub" data-i18n="hero-invite">VOUS ÊTES CORDIALEMENT INVITÉS À CÉLÉBRER</p>
+  <h1>Assia</h1>
+  <p class="amp">&amp;</p>
+  <h1 style="margin-bottom:20px">Radouane</h1>
+
+  <!-- small floral divider -->
+  <svg class="fl-divider" viewBox="0 0 400 28" style="max-width:330px;margin-bottom:16px" aria-hidden="true">
+    <g fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.55"><line x1="10" y1="14" x2="155" y2="14"/><line x1="245" y1="14" x2="390" y2="14"/></g>
+    <g fill="#7A9E7E" opacity="0.62"><ellipse cx="200" cy="14" rx="4" ry="7" transform="rotate(-4 200 14)"/><ellipse cx="192" cy="10" rx="3" ry="5" transform="rotate(14 192 10)"/><ellipse cx="208" cy="10" rx="3" ry="5" transform="rotate(-14 208 10)"/><ellipse cx="184" cy="17" rx="7" ry="2.5" transform="rotate(24 184 17)" fill="#A8C4AB"/><ellipse cx="216" cy="17" rx="7" ry="2.5" transform="rotate(-24 216 17)" fill="#A8C4AB"/></g>
+    <g fill="#C9A96E" opacity="0.5"><circle cx="168" cy="14" r="2.3"/><circle cx="232" cy="14" r="2.3"/><circle cx="153" cy="14" r="1.7"/><circle cx="247" cy="14" r="1.7"/></g>
+  </svg>
+
+  <p class="hero-date" data-i18n="hero-date">SAMEDI 11 JUILLET 2026</p>
+  <p class="hero-venue">TIFAWIN RESORT · KHENIFRA, MAROC</p>
+  <div class="hero-cta">
+    <button class="btn-dark" onclick="openCalModal()" data-i18n="btn-addcal">Ajouter au calendrier</button>
+    <button class="btn-out" onclick="goTo('rsvp')" data-i18n="btn-rsvp">RSVP</button>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="countdown-sec">
+  <p class="sec-lbl" data-i18n="cd-label">LE GRAND JOUR APPROCHE</p>
+  <div class="cd-wrap">
+    <div class="cbox"><div class="cbox-num" id="cd-days">–</div><div class="cbox-lbl" data-i18n="cd-days">JOURS</div></div>
+    <div class="cbox"><div class="cbox-num" id="cd-hours">–</div><div class="cbox-lbl" data-i18n="cd-hours">HEURES</div></div>
+    <div class="cbox"><div class="cbox-num" id="cd-mins">–</div><div class="cbox-lbl" data-i18n="cd-mins">MINUTES</div></div>
+    <div class="cbox"><div class="cbox-num" id="cd-secs">–</div><div class="cbox-lbl" data-i18n="cd-secs">SECONDES</div></div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-inner">
+    <p class="sec-lbl" data-i18n="story-label">NOTRE HISTOIRE</p>
+    <h2 data-i18n="story-title">Un amour qui mérite d'être fêté</h2>
+    <div class="sep"><div class="sl"></div><div class="sd"></div><div class="sl"></div></div>
+    <p data-i18n="story-body">Après des années à construire ensemble un avenir lumineux, nous avons la joie de vous convier à partager avec nous le plus beau jour de notre vie, au cœur des montagnes de l'Atlas Moyen, à Khenifra.</p>
+    <p class="sig" data-i18n="story-sig">— Assia &amp; Radouane</p>
+  </div>
+</section>
+
+<!-- DETAILS -->
+<section id="details">
+  <div class="det-inner">
+    <p class="sec-lbl" data-i18n="details-label">DÉTAILS DE LA CÉRÉMONIE</p>
+
+    <!-- 3 top cards -->
+    <div class="top-cards">
+      <div class="icard">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><g stroke="#C9A96E" stroke-width="0.7"><rect x="2" y="3" width="20" height="19" rx="1" fill="none"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="7" y1="0" x2="7" y2="6"/><line x1="17" y1="0" x2="17" y2="6"/></g><text x="12" y="19" font-family="Georgia,serif" font-size="6.5" fill="#C9A96E" text-anchor="middle">11</text></svg>
+        <p class="icard-lbl" data-i18n="det-date-lbl">DATE &amp; HEURE</p>
+        <p class="icard-main" data-i18n="det-date">11 Juillet 2026</p>
+        <p class="icard-sub" data-i18n="det-time">Samedi à 18h00</p>
+      </div>
+      <div class="icard">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 4.5 6 4.5 10.5C4.5 16.5 12 22 12 22S19.5 16.5 19.5 10.5C19.5 6 16 2 12 2Z" stroke="#C9A96E" stroke-width="0.7" fill="none"/><circle cx="12" cy="10.5" r="3" stroke="#C9A96E" stroke-width="0.7" fill="none"/></svg>
+        <p class="icard-lbl" data-i18n="det-venue-lbl">LIEU</p>
+        <p class="icard-main">Tifawin Resort</p>
+        <p class="icard-sub" data-i18n="det-venue-sub">Khenifra · Atlas Moyen · Maroc</p>
+      </div>
+      <div class="icard">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6L20 6L20 18L4 18Z" stroke="#C9A96E" stroke-width="0.7" fill="none"/><path d="M4 6L12 13L20 6" stroke="#C9A96E" stroke-width="0.7" fill="none"/></svg>
+        <p class="icard-lbl" data-i18n="det-rsvp-lbl">RÉPONSE AVANT</p>
+        <p class="icard-main" data-i18n="det-rsvp">1er Juin 2026</p>
+        <p class="icard-sub">radouane.abainagh@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Floral divider -->
+    <svg class="fl-divider" viewBox="0 0 560 32" style="margin:4px auto 34px" aria-hidden="true">
+      <g fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.45"><line x1="20" y1="16" x2="215" y2="16"/><line x1="345" y1="16" x2="540" y2="16"/></g>
+      <g fill="#7A9E7E" opacity="0.58"><ellipse cx="280" cy="16" rx="4" ry="7" transform="rotate(-4 280 16)"/><ellipse cx="272" cy="11" rx="3" ry="5" transform="rotate(14 272 11)"/><ellipse cx="288" cy="11" rx="3" ry="5" transform="rotate(-14 288 11)"/><ellipse cx="264" cy="19" rx="8" ry="2.5" transform="rotate(21 264 19)" fill="#A8C4AB"/><ellipse cx="296" cy="19" rx="8" ry="2.5" transform="rotate(-21 296 19)" fill="#A8C4AB"/></g>
+      <g fill="#C9A96E" opacity="0.5"><circle cx="250" cy="16" r="2.3"/><circle cx="310" cy="16" r="2.3"/><circle cx="234" cy="16" r="1.7"/><circle cx="326" cy="16" r="1.7"/><circle cx="220" cy="16" r="1.2"/><circle cx="340" cy="16" r="1.2"/></g>
+    </svg>
+
+    <!-- Program -->
+    <div class="prog-block">
+      <p class="prog-title" data-i18n="prog-label">PROGRAMME DE LA SOIRÉE</p>
+      <div class="prog-row"><div class="p-time">18h00</div><div><div class="p-event" data-i18n="prog-reception">Réception des invités</div></div></div>
+      <div class="prog-row"><div class="p-time">19h00</div><div><div class="p-event" data-i18n="prog-entry">Entrée des mariés</div></div></div>
+      <div class="prog-row"><div class="p-time">19h30</div><div><div class="p-event" data-i18n="prog-ceremony">Cérémonie de mariage</div><div class="p-note" data-i18n="prog-ceremony-end">Jusqu'à 20h30</div></div></div>
+      <div class="prayer-row" data-i18n="prog-maghreb">* Prière du Maghreb vers 20h35</div>
+      <div class="prog-row"><div class="p-time">21h00</div><div><div class="p-event" data-i18n="prog-dinner">Dîner</div></div></div>
+      <div class="prayer-row" data-i18n="prog-icha">* Prière de l'Icha vers 22h00</div>
+      <div class="prog-row"><div class="p-time">22h10</div><div><div class="p-event" data-i18n="prog-firstdance">Première danse</div></div></div>
+      <div class="prog-row"><div class="p-time">23h00</div><div><div class="p-event" data-i18n="prog-cake">Découpe du gâteau</div></div></div>
+      <div class="prog-row"><div class="p-time">00h00</div><div><div class="p-event" data-i18n="prog-dance">Danse &amp; Feux d'artifice</div></div></div>
+    </div>
+
+    <!-- Info cards -->
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-hd">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M6.5 1L1.5 3.5v4c0 2.8 2.3 4.2 5 5 2.7-.8 5-2.2 5-5v-4L6.5 1z" stroke="#C9A96E" stroke-width="0.65" fill="none"/></svg>
+          <span data-i18n="info-privacy-title">CÉLÉBRATION INTIMISTE &amp; SANS ÉCRANS</span>
+        </div>
+        <p class="info-card-body" data-i18n="info-privacy-body">Pour préserver l'intimité et la magie de ce jour, nous vous invitons à ne pas prendre de photos ou vidéos, particulièrement pendant la cérémonie et les danses. Soyez pleinement présents avec nous et respectez la vie privée de chacun. Merci pour votre compréhension et votre discrétion.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-hd">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M6.5 1 Q4 4 4 6.5 Q4 10.5 6.5 12.5 Q9 10.5 9 6.5 Q9 4 6.5 1Z" stroke="#C9A96E" stroke-width="0.65" fill="none"/><line x1="6.5" y1="1" x2="6.5" y2="12.5" stroke="#C9A96E" stroke-width="0.45"/></svg>
+          <span data-i18n="info-prayer-title">ESPACE PRIÈRE</span>
+        </div>
+        <p class="info-card-body" data-i18n="info-prayer-body">Un espace de prière dédié sera mis à disposition des invités tout au long de la soirée.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-hd">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M2 12L2 6L6.5 2L11 6L11 12Z" stroke="#C9A96E" stroke-width="0.65" fill="none"/><rect x="4.5" y="8.5" width="4" height="3.5" stroke="#C9A96E" stroke-width="0.55" fill="none"/></svg>
+          <span data-i18n="info-accom-title">HÉBERGEMENT</span>
+        </div>
+        <p class="info-card-body" data-i18n="info-accom-body">Pour les invités venant de loin, nous suggérons :<br><em>Hôtel Ajdir Izourane</em> — centre-ville de Khenifra<br><em>Dar Zayane</em> — en montagne, à 11km de Khenifra</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-hd">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true"><path d="M4.5 1L2 3.5L2 12L11 12L11 3.5L8.5 1Z" stroke="#C9A96E" stroke-width="0.65" fill="none"/><path d="M4.5 1Q6.5 3 8.5 1" stroke="#C9A96E" stroke-width="0.55" fill="none"/></svg>
+          <span data-i18n="info-dress-title">DRESS CODE</span>
+        </div>
+        <p class="info-card-body" data-i18n="info-dress-body"><em>Hommes :</em> Djellaba en début de cérémonie, tenue formelle pour le reste.<br><em>Femmes :</em> Tout ce qui vous fait vous sentir bonita.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIEU -->
+<section id="lieu">
+  <p class="sec-lbl" data-i18n="lieu-label">LE LIEU</p>
+  <h2 data-i18n="lieu-title">Tifawin Resort, Khenifra</h2>
+  <div class="sep"><div class="sl"></div><div class="sd"></div><div class="sl"></div></div>
+  <p style="font-size:13px;line-height:1.9;color:var(--text-md);margin-bottom:26px;max-width:440px;margin-left:auto;margin-right:auto" data-i18n="lieu-body">Niché au cœur de l'Atlas Moyen, Tifawin Resort vous accueille dans un cadre naturel d'exception, entre montagnes et ciel immense du Maroc profond.</p>
+  <a class="map-link" href="https://maps.app.goo.gl/3NLSHEwJMFAYyQZF6" target="_blank" rel="noopener">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 0.5C4 0.5 2 2.5 2 5C2 8 6 11.5 6 11.5S10 8 10 5C10 2.5 8 0.5 6 0.5Z" stroke="#C9A96E" stroke-width="0.65"/><circle cx="6" cy="4.8" r="1.6" stroke="#C9A96E" stroke-width="0.6"/></svg>
+    <span data-i18n="lieu-map">Ouvrir sur Google Maps</span>
+  </a>
+</section>
+
+<!-- Floral band -->
+<div style="background:var(--white);padding:16px 0;border-top:0.5px solid var(--border-lt);border-bottom:0.5px solid var(--border-lt)">
+  <svg style="display:block;width:100%;max-width:680px;margin:0 auto" viewBox="0 0 680 38" aria-hidden="true">
+    <g fill="none" stroke="#C9A96E" stroke-width="0.45" opacity="0.38"><line x1="0" y1="19" x2="272" y2="19"/><line x1="408" y1="19" x2="680" y2="19"/></g>
+    <g fill="none" stroke="#7A9E7E" stroke-width="0.55" opacity="0.5">
+      <path d="M340,32 Q326,24 316,16 Q309,10 313,4"/><path d="M340,32 Q354,24 364,16 Q371,10 367,4"/>
+      <path d="M340,32 Q340,22 340,12"/><path d="M316,16 Q306,10 302,4"/><path d="M364,16 Q374,10 378,4"/>
+    </g>
+    <g opacity="0.82"><circle cx="313" cy="3" r="6" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.55"/><circle cx="313" cy="3" r="3.5" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.4"/><circle cx="313" cy="3" r="1.8" fill="#C9A96E" opacity="0.5"/></g>
+    <g opacity="0.82"><circle cx="367" cy="3" r="6" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.55"/><circle cx="367" cy="3" r="3.5" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.4"/><circle cx="367" cy="3" r="1.8" fill="#C9A96E" opacity="0.5"/></g>
+    <g opacity="0.78"><circle cx="302" cy="3" r="4.5" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.5"/><circle cx="302" cy="3" r="2.5" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.35"/></g>
+    <g opacity="0.78"><circle cx="378" cy="3" r="4.5" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.5"/><circle cx="378" cy="3" r="2.5" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.35"/></g>
+    <g opacity="0.9"><circle cx="340" cy="11" r="8" fill="#FAF8F2" stroke="#C9A96E" stroke-width="0.65"/><circle cx="340" cy="11" r="5" fill="#E8D5B0" stroke="#C9A96E" stroke-width="0.45"/><circle cx="340" cy="11" r="2.5" fill="#C9A96E" opacity="0.55"/><ellipse cx="333" cy="8" rx="5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.3" transform="rotate(-20 333 8)"/><ellipse cx="347" cy="8" rx="5" ry="3" fill="#F0EBE0" stroke="#C9A96E" stroke-width="0.3" transform="rotate(20 347 8)"/></g>
+    <g fill="#7A9E7E" opacity="0.45"><ellipse cx="325" cy="23" rx="9" ry="3" transform="rotate(28 325 23)"/><ellipse cx="355" cy="23" rx="9" ry="3" transform="rotate(-28 355 23)"/><ellipse cx="308" cy="16" rx="7" ry="2.5" transform="rotate(14 308 16)"/><ellipse cx="372" cy="16" rx="7" ry="2.5" transform="rotate(-14 372 16)"/></g>
+    <g fill="#C9A96E" opacity="0.32"><circle cx="282" cy="19" r="2"/><circle cx="398" cy="19" r="2"/><circle cx="266" cy="19" r="1.5"/><circle cx="414" cy="19" r="1.5"/></g>
+  </svg>
+</div>
+
+<!-- INV GEN -->
+<section id="inv-gen">
+  <p class="sec-lbl" data-i18n="inv-label">GÉNÉRER UNE INVITATION PERSONNALISÉE</p>
+  <div class="sep"><div class="sl"></div><div class="sd"></div><div class="sl"></div></div>
+  <div class="inv-form">
+    <input type="text" id="guest-name" data-i18n-placeholder="inv-ph-name" placeholder="Nom complet de l'invité(e)"/>
+    <input type="text" id="guest-title" data-i18n-placeholder="inv-ph-title" placeholder="Titre (M. &amp; Mme, Dr., …)"/>
+    <input type="email" id="guest-email" data-i18n-placeholder="inv-ph-email" placeholder="Email de l'invité(e) (optionnel)"/>
+    <div class="inv-row">
+      <select id="lang-inv" style="flex:1"><option value="fr">Français</option><option value="ar">Arabe / العربية</option><option value="en">English</option></select>
+      <button class="btn-dark" onclick="generateInvite()" style="flex:1" data-i18n="inv-gen-btn">Générer</button>
+    </div>
+    <div id="inv-out" style="display:none">
+      <div class="inv-preview">
+        <svg style="display:block;width:100%;max-width:280px;margin:0 auto 10px" viewBox="0 0 280 28" aria-hidden="true">
+          <g fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"><line x1="10" y1="14" x2="112" y2="14"/><line x1="168" y1="14" x2="270" y2="14"/></g>
+          <g fill="#7A9E7E" opacity="0.6"><ellipse cx="140" cy="14" rx="4" ry="7" transform="rotate(-4 140 14)"/><ellipse cx="132" cy="9" rx="3" ry="5" transform="rotate(14 132 9)"/><ellipse cx="148" cy="9" rx="3" ry="5" transform="rotate(-14 148 9)"/><ellipse cx="125" cy="17" rx="7" ry="2.5" transform="rotate(22 125 17)" fill="#A8C4AB"/><ellipse cx="155" cy="17" rx="7" ry="2.5" transform="rotate(-22 155 17)" fill="#A8C4AB"/></g>
+          <g fill="#C9A96E" opacity="0.48"><circle cx="116" cy="14" r="2"/><circle cx="164" cy="14" r="2"/></g>
+        </svg>
+        <p class="pre-greet" id="inv-greeting"></p>
+        <p class="pre-name" id="inv-guestname"></p>
+        <div class="pre-line"></div>
+        <p class="pre-body" id="inv-body"></p>
+        <div class="pre-line" style="width:110px"></div>
+        <p class="pre-sig">Assia &amp; Radouane</p>
+        <p class="pre-info">11 · 07 · 2026 · TIFAWIN RESORT · KHENIFRA</p>
+      </div>
+      <div class="inv-acts">
+        <button class="btn-dark" onclick="copyInvite()" data-i18n="inv-copy">Copier le texte</button>
+        <button class="btn-out" onclick="sendEmailInvite()" data-i18n="inv-email">Envoyer par email</button>
+      </div>
+      <p id="copy-msg"></p>
+    </div>
+  </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <p class="sec-lbl" data-i18n="rsvp-label">RÉPONDEZ-NOUS</p>
+  <h2 data-i18n="rsvp-title">Serez-vous parmi nous ?</h2>
+  <div class="sep"><div class="sl"></div><div class="sd"></div><div class="sl"></div></div>
+  <p class="rsvp-sub" data-i18n="rsvp-body">Faites-nous part de votre réponse avant le 1er juin 2026<br>afin que chaque détail soit préparé avec soin pour vous.</p>
+  <div class="rsvp-btns">
+    <button class="btn-dark" onclick="rsvpYes()" data-i18n="rsvp-yes">Avec joie, j'accepte</button>
+    <button class="btn-out" onclick="rsvpNo()" data-i18n="rsvp-no">À regret, je décline</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>ASSIA &amp; RADOUANE · 2026</p>
+  <svg width="64" height="18" viewBox="0 0 64 18" aria-hidden="true">
+    <g fill="#7A9E7E" opacity="0.48"><ellipse cx="32" cy="9" rx="3" ry="6" transform="rotate(-4 32 9)"/><ellipse cx="26" cy="6" rx="2.5" ry="4" transform="rotate(14 26 6)"/><ellipse cx="38" cy="6" rx="2.5" ry="4" transform="rotate(-14 38 6)"/><ellipse cx="21" cy="11" rx="6" ry="2" transform="rotate(20 21 11)" fill="#A8C4AB"/><ellipse cx="43" cy="11" rx="6" ry="2" transform="rotate(-20 43 11)" fill="#A8C4AB"/></g>
+    <g fill="#C9A96E" opacity="0.42"><circle cx="14" cy="10" r="2"/><circle cx="50" cy="10" r="2"/><circle cx="7" cy="10" r="1.4"/><circle cx="57" cy="10" r="1.4"/></g>
+  </svg>
+  <p>TIFAWIN RESORT · KHENIFRA, MAROC</p>
+</footer>
+
+<script>
+const i18n={fr:{"nav-home":"Accueil","nav-details":"Détails","nav-lieu":"Lieu","nav-inv":"Invitations","nav-cal":"Calendrier","hero-invite":"VOUS ÊTES CORDIALEMENT INVITÉS À CÉLÉBRER","hero-date":"SAMEDI 11 JUILLET 2026","btn-addcal":"Ajouter au calendrier","btn-rsvp":"RSVP","cd-label":"LE GRAND JOUR APPROCHE","cd-days":"JOURS","cd-hours":"HEURES","cd-mins":"MINUTES","cd-secs":"SECONDES","story-label":"NOTRE HISTOIRE","story-title":"Un amour qui mérite d'être fêté","story-body":"Après des années à construire ensemble un avenir lumineux, nous avons la joie de vous convier à partager avec nous le plus beau jour de notre vie, au cœur des montagnes de l'Atlas Moyen, à Khenifra.","story-sig":"— Assia & Radouane","details-label":"DÉTAILS DE LA CÉRÉMONIE","det-date-lbl":"DATE & HEURE","det-date":"11 Juillet 2026","det-time":"Samedi à 18h00","det-venue-lbl":"LIEU","det-venue-sub":"Khenifra · Atlas Moyen · Maroc","det-rsvp-lbl":"RÉPONSE AVANT","det-rsvp":"1er Juin 2026","prog-label":"PROGRAMME DE LA SOIRÉE","prog-reception":"Réception des invités","prog-entry":"Entrée des mariés","prog-ceremony":"Cérémonie de mariage","prog-ceremony-end":"Jusqu'à 20h30","prog-maghreb":"* Prière du Maghreb vers 20h35","prog-dinner":"Dîner","prog-icha":"* Prière de l'Icha vers 22h00","prog-firstdance":"Première danse","prog-cake":"Découpe du gâteau","prog-dance":"Danse & Feux d'artifice","info-privacy-title":"CÉLÉBRATION INTIMISTE & SANS ÉCRANS","info-privacy-body":"Pour préserver l'intimité et la magie de ce jour, nous vous invitons à ne pas prendre de photos ou vidéos, particulièrement pendant la cérémonie et les danses. Soyez pleinement présents avec nous et respectez la vie privée de chacun. Merci pour votre compréhension et votre discrétion.","info-prayer-title":"ESPACE PRIÈRE","info-prayer-body":"Un espace de prière dédié sera mis à disposition des invités tout au long de la soirée.","info-accom-title":"HÉBERGEMENT","info-accom-body":"Pour les invités venant de loin, nous suggérons :<br><em>Hôtel Ajdir Izourane</em> — centre-ville de Khenifra<br><em>Dar Zayane</em> — en montagne, à 11km de Khenifra","info-dress-title":"DRESS CODE","info-dress-body":"<em>Hommes :</em> Djellaba en début de cérémonie, tenue formelle pour le reste.<br><em>Femmes :</em> Tout ce qui vous fait vous sentir bonita.","lieu-label":"LE LIEU","lieu-title":"Tifawin Resort, Khenifra","lieu-body":"Niché au cœur de l'Atlas Moyen, Tifawin Resort vous accueille dans un cadre naturel d'exception, entre montagnes et ciel immense du Maroc profond.","lieu-map":"Ouvrir sur Google Maps","inv-label":"GÉNÉRER UNE INVITATION PERSONNALISÉE","inv-gen-btn":"Générer","inv-copy":"Copier le texte","inv-email":"Envoyer par email","inv-ph-name":"Nom complet de l'invité(e)","inv-ph-title":"Titre (M. & Mme, Dr., …)","inv-ph-email":"Email de l'invité(e) (optionnel)","rsvp-label":"RÉPONDEZ-NOUS","rsvp-title":"Serez-vous parmi nous ?","rsvp-body":"Faites-nous part de votre réponse avant le 1er juin 2026<br>afin que chaque détail soit préparé avec soin pour vous.","rsvp-yes":"Avec joie, j'accepte","rsvp-no":"À regret, je décline","m-title":"Ajouter à votre calendrier","m-gcal":"Google Calendar","m-gcal-sub":"Ajouter à Google Calendar","m-ical":"Apple Calendar / iCal","m-ical-sub":"Télécharger le fichier .ics","m-outlook":"Outlook Calendar","m-outlook-sub":"Ajouter à Outlook","m-rsvp-label":"ENVOYER UN EMAIL DE CONFIRMATION","m-rsvp-btn":"Envoyer ma réponse","inv-greeting-text":"Cher(e)","inv-body-text":"Nous avons l'immense joie de vous convier à la célébration de notre mariage, qui se tiendra le samedi 11 juillet 2026 à partir de 18h00 au Tifawin Resort, Khenifra, au cœur de l'Atlas Moyen. Votre présence sera notre plus beau cadeau.","rsvp-yes-body":"Bonjour Assia et Radouane,\n\nNous acceptons avec grand plaisir votre invitation.\n\nCordialement,","rsvp-no-body":"Bonjour Assia et Radouane,\n\nÀ notre grand regret nous ne pourrons pas être présents. Nous vous souhaitons un très beau mariage.\n\nCordialement,"},ar:{"nav-home":"الرئيسية","nav-details":"التفاصيل","nav-lieu":"المكان","nav-inv":"الدعوات","nav-cal":"التقويم","hero-invite":"نتشرف بدعوتكم للاحتفال بزفافنا","hero-date":"السبت 11 يوليوز 2026","btn-addcal":"أضف للتقويم","btn-rsvp":"تأكيد الحضور","cd-label":"العد التنازلي للحفل","cd-days":"أيام","cd-hours":"ساعات","cd-mins":"دقائق","cd-secs":"ثواني","story-label":"قصتنا","story-title":"حب يستحق الاحتفاء","story-body":"بعد سنوات من البناء المشترك، يسعدنا أن ندعوكم لمشاركتنا أجمل أيام حياتنا في قلب جبال الأطلس المتوسط بخنيفرة.","story-sig":"— عاصية وردوان","details-label":"تفاصيل حفل الزفاف","det-date-lbl":"التاريخ والوقت","det-date":"11 يوليوز 2026","det-time":"السبت الساعة 18:00","det-venue-lbl":"المكان","det-venue-sub":"خنيفرة · الأطلس المتوسط · المغرب","det-rsvp-lbl":"آخر أجل للرد","det-rsvp":"1 يونيو 2026","prog-label":"برنامج الحفل","prog-reception":"استقبال الضيوف","prog-entry":"دخول العروسين","prog-ceremony":"حفل الزفاف","prog-ceremony-end":"حتى الساعة 20:30","prog-maghreb":"* صلاة المغرب حوالي 20:35","prog-dinner":"العشاء","prog-icha":"* صلاة العشاء حوالي 22:00","prog-firstdance":"أول رقصة","prog-cake":"تقطيع الكعكة","prog-dance":"رقص وألعاب نارية","info-privacy-title":"احتفال حميمي بدون هواتف","info-privacy-body":"للحفاظ على خصوصية وسحر هذا اليوم، نرجو من ضيوفنا الامتناع عن التصوير خاصة خلال مراسم الزفاف وأثناء الرقص. كونوا معنا بكل حضور واحترموا خصوصية الجميع. شكراً لتفهمكم.","info-prayer-title":"مصلى مخصص","info-prayer-body":"سيكون هناك مصلى مخصص متاح للضيوف طوال مدة الحفل.","info-accom-title":"الإقامة","info-accom-body":"للضيوف القادمين من بعيد نقترح :<br><em>فندق أجدير إيزورانه</em> — وسط مدينة خنيفرة<br><em>دار الزيان</em> — في الجبل على بعد 11كم","info-dress-title":"كود اللباس","info-dress-body":"<em>الرجال :</em> جلابة في بداية الحفل ثم لباس رسمي.<br><em>النساء :</em> ما يجعلكن تشعرن بالجمال والأناقة.","lieu-label":"المكان","lieu-title":"تيفاوين ريزورت، خنيفرة","lieu-body":"يقع هذا الفضاء الاستثنائي في قلب الأطلس المتوسط محاطاً بجبال خنيفرة وسمائها الواسعة.","lieu-map":"فتح على خرائط غوغل","inv-label":"توليد دعوة شخصية","inv-gen-btn":"توليد","inv-copy":"نسخ النص","inv-email":"إرسال بالبريد","inv-ph-name":"الاسم الكامل للمدعو/ة","inv-ph-title":"اللقب (السيد، الدكتور…)","inv-ph-email":"البريد الإلكتروني (اختياري)","rsvp-label":"ردّوا علينا","rsvp-title":"هل ستكونون معنا؟","rsvp-body":"يُرجى إعلامنا بردّكم قبل 1 يونيو 2026<br>حتى نتمكن من الاستعداد لاستقبالكم.","rsvp-yes":"بكل سرور، أقبل","rsvp-no":"للأسف، أعتذر","m-title":"إضافة إلى التقويم","m-gcal":"Google Calendar","m-gcal-sub":"إضافة إلى Google Calendar","m-ical":"Apple Calendar / iCal","m-ical-sub":"تنزيل ملف .ics","m-outlook":"Outlook Calendar","m-outlook-sub":"إضافة إلى Outlook","m-rsvp-label":"إرسال بريد تأكيد الحضور","m-rsvp-btn":"إرسال ردّي","inv-greeting-text":"العزيز/العزيزة","inv-body-text":"يسعدنا أن ندعوكم لحضور حفل زفافنا يوم السبت 11 يوليوز 2026 الساعة السادسة برسورت تيفاوين خنيفرة. وجودكم بيننا هو أجمل هدية.","rsvp-yes-body":"مرحباً عاصية وردوان،\n\nيسعدني قبول دعوتكم الكريمة.\n\nمع التحية،","rsvp-no-body":"مرحباً عاصية وردوان،\n\nللأسف لن أتمكن من الحضور. أتمنى لكما حفلاً رائعاً.\n\nمع التحية،"},en:{"nav-home":"Home","nav-details":"Details","nav-lieu":"Venue","nav-inv":"Invitations","nav-cal":"Calendar","hero-invite":"YOU ARE CORDIALLY INVITED TO CELEBRATE","hero-date":"SATURDAY 11 JULY 2026","btn-addcal":"Add to calendar","btn-rsvp":"RSVP","cd-label":"THE BIG DAY IS COMING","cd-days":"DAYS","cd-hours":"HOURS","cd-mins":"MINUTES","cd-secs":"SECONDS","story-label":"OUR STORY","story-title":"A love worth celebrating","story-body":"After years of building a bright future together, we are overjoyed to invite you to share in our most beautiful day, in the heart of the Middle Atlas Mountains, in Khenifra.","story-sig":"— Assia & Radouane","details-label":"CEREMONY DETAILS","det-date-lbl":"DATE & TIME","det-date":"11 July 2026","det-time":"Saturday at 6:00 PM","det-venue-lbl":"VENUE","det-venue-sub":"Khenifra · Middle Atlas · Morocco","det-rsvp-lbl":"REPLY BY","det-rsvp":"1st June 2026","prog-label":"EVENING PROGRAMME","prog-reception":"Guests Reception","prog-entry":"Bride & Groom Entry","prog-ceremony":"Wedding Ceremony","prog-ceremony-end":"Until 8:30 PM","prog-maghreb":"* Maghreb prayer around 8:35 PM","prog-dinner":"Dinner","prog-icha":"* Isha prayer around 10:00 PM","prog-firstdance":"First Dance","prog-cake":"Cake Cutting","prog-dance":"Dancing & Fireworks","info-privacy-title":"INTIMATE & UNPLUGGED CELEBRATION","info-privacy-body":"To preserve the intimacy and magic of this special day, we kindly ask our guests to refrain from taking photos or videos, particularly during the ceremony and while guests are dancing. We invite you to be fully present with us and to respect the privacy of everyone attending. Thank you for your understanding and discretion.","info-prayer-title":"PRAYER AREA","info-prayer-body":"A dedicated prayer space will be available for guests throughout the evening.","info-accom-title":"ACCOMMODATION","info-accom-body":"For guests travelling from afar, we suggest:<br><em>Hôtel Ajdir Izourane</em> — Khenifra city centre<br><em>Dar Zayane</em> — in the mountains, 11km from Khenifra","info-dress-title":"DRESS CODE","info-dress-body":"<em>Men:</em> Djellaba for the ceremony, formal attire for the rest of the evening.<br><em>Women:</em> Whatever makes you feel bonita.","lieu-label":"THE VENUE","lieu-title":"Tifawin Resort, Khenifra","lieu-body":"Nestled in the heart of the Middle Atlas, Tifawin Resort welcomes you in an exceptional natural setting, surrounded by Khenifra's mountains and Morocco's vast skies.","lieu-map":"Open on Google Maps","inv-label":"GENERATE A PERSONALISED INVITATION","inv-gen-btn":"Generate","inv-copy":"Copy text","inv-email":"Send by email","inv-ph-name":"Guest's full name","inv-ph-title":"Title (Mr & Mrs, Dr., …)","inv-ph-email":"Guest's email (optional)","rsvp-label":"YOUR RESPONSE","rsvp-title":"Will you join us?","rsvp-body":"Please let us know by 1st June 2026<br>so every detail can be arranged with care.","rsvp-yes":"Joyfully accept","rsvp-no":"Regretfully decline","m-title":"Add to your calendar","m-gcal":"Google Calendar","m-gcal-sub":"Add to Google Calendar","m-ical":"Apple Calendar / iCal","m-ical-sub":"Download .ics file","m-outlook":"Outlook Calendar","m-outlook-sub":"Add to Outlook","m-rsvp-label":"SEND A CONFIRMATION EMAIL","m-rsvp-btn":"Send my response","inv-greeting-text":"Dear","inv-body-text":"We joyfully invite you to celebrate our wedding on Saturday, 11 July 2026 at 6:00 PM at Tifawin Resort, Khenifra, in the heart of the Middle Atlas, Morocco. Your presence is our greatest gift.","rsvp-yes-body":"Dear Assia and Radouane,\n\nWe joyfully accept your kind invitation.\n\nWarm regards,","rsvp-no-body":"Dear Assia and Radouane,\n\nWe regretfully cannot attend. Wishing you a beautiful wedding.\n\nWarm regards,"}};
+
+let currentLang='fr';
+function setLang(lang){
+  currentLang=lang;
+  const t=i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!==undefined)el.innerHTML=t[k];});
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.getAttribute('data-i18n-placeholder');if(t[k]!==undefined)el.placeholder=t[k];});
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.textContent.toLowerCase()===lang));
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+  const s=document.getElementById('m-sub-el');
+  if(s)s.innerHTML=lang==='ar'?'زفاف عاصية وردوان · السبت 11 يوليوز 2026 الساعة 18:00<br>تيفاوين ريزورت، خنيفرة، المغرب':lang==='en'?"Assia & Radouane's Wedding · Saturday 11 July 2026 at 6:00 PM<br>Tifawin Resort, Khenifra, Morocco":"Mariage d'Assia &amp; Radouane · Samedi 11 Juillet 2026 à 18h00<br>Tifawin Resort, Khenifra, Maroc";
+}
+
+const WD=new Date('2026-07-11T18:00:00');
+function updateCD(){
+  const d=WD-new Date();
+  if(d<=0){['days','hours','mins','secs'].forEach(k=>document.getElementById('cd-'+k).textContent='0');return;}
+  document.getElementById('cd-days').textContent=Math.floor(d/864e5);
+  document.getElementById('cd-hours').textContent=Math.floor((d%864e5)/36e5);
+  document.getElementById('cd-mins').textContent=Math.floor((d%36e5)/6e4);
+  document.getElementById('cd-secs').textContent=Math.floor((d%6e4)/1e3);
+}
+updateCD();setInterval(updateCD,1000);
+
+function buildCalLinks(){
+  const t=encodeURIComponent('Mariage Assia & Radouane'),l=encodeURIComponent('Tifawin Resort, Khenifra, Maroc'),d=encodeURIComponent('Vous êtes invité(e) au mariage de Assia et Radouane. Tifawin Resort, Khenifra, Maroc.');
+  document.getElementById('gcal-link').href=`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${t}&dates=20260711T180000/20260712T040000&location=${l}&details=${d}`;
+  document.getElementById('outlook-link').href=`https://outlook.live.com/calendar/0/deeplink/compose?subject=${t}&startdt=2026-07-11T18:00:00&enddt=2026-07-12T04:00:00&location=${l}&body=${d}`;
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//AR Wedding//FR','BEGIN:VEVENT','DTSTART:20260711T180000Z','DTEND:20260712T040000Z','SUMMARY:Mariage Assia & Radouane','LOCATION:Tifawin Resort\\, Khenifra\\, Maroc','DESCRIPTION:Mariage Assia & Radouane.','GEO:32.9391;-5.6667','END:VEVENT','END:VCALENDAR'].join('\r\n');
+  document.getElementById('ical-link').href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));
+}
+buildCalLinks();
+
+function openCalModal(){document.getElementById('cal-overlay').classList.add('show');}
+function closeCalModal(){document.getElementById('cal-overlay').classList.remove('show');}
+document.getElementById('cal-overlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeCalModal();});
+
+function generateInvite(){
+  const name=document.getElementById('guest-name').value.trim();
+  const title=document.getElementById('guest-title').value.trim();
+  const lang=document.getElementById('lang-inv').value;
+  if(!name){alert(lang==='ar'?'الرجاء إدخال اسم المدعو/ة':'Veuillez saisir le nom de l\'invité(e).');return;}
+  const t=i18n[lang];
+  document.getElementById('inv-greeting').textContent=t['inv-greeting-text'];
+  document.getElementById('inv-guestname').textContent=(title?title+' ':'')+name;
+  document.getElementById('inv-body').textContent=t['inv-body-text'];
+  const out=document.getElementById('inv-out');
+  out.style.display='block';
+  setTimeout(()=>out.scrollIntoView({behavior:'smooth',block:'start'}),80);
+}
+
+function copyInvite(){
+  const name=document.getElementById('inv-guestname').textContent;
+  const body=document.getElementById('inv-body').textContent;
+  navigator.clipboard.writeText(`${name}\n\n${body}\n\nAssia & Radouane\n11 · 07 · 2026 · TIFAWIN RESORT · KHENIFRA`).then(()=>{
+    const m=document.getElementById('copy-msg');
+    m.textContent=currentLang==='ar'?'تم النسخ.':currentLang==='en'?'Copied.':'Texte copié.';
+    setTimeout(()=>m.textContent='',3000);
+  });
+}
+
+function sendEmailInvite(){
+  const name=document.getElementById('inv-guestname').textContent;
+  const email=document.getElementById('guest-email').value.trim()||'radouane.abainagh@gmail.com';
+  const body=document.getElementById('inv-body').textContent;
+  window.open(`mailto:${email}?subject=${encodeURIComponent('Invitation – Mariage Assia & Radouane')}&body=${encodeURIComponent(name+',\n\n'+body+'\n\nAssia & Radouane\n11 · 07 · 2026 · Tifawin Resort · Khenifra')}`);
+}
+
+function rsvpYes(){const t=i18n[currentLang];window.open(`mailto:radouane.abainagh@gmail.com?subject=${encodeURIComponent('RSVP – '+(currentLang==='ar'?'قبول الدعوة':currentLang==='en'?'Joyfully Accepting':'Accepte avec joie'))}&body=${encodeURIComponent(t['rsvp-yes-body'])}`);}
+function rsvpNo(){const t=i18n[currentLang];window.open(`mailto:radouane.abainagh@gmail.com?subject=${encodeURIComponent('RSVP – '+(currentLang==='ar'?'اعتذار':currentLang==='en'?'Regretfully Declining':'À regret'))}&body=${encodeURIComponent(t['rsvp-no-body'])}`);}
+
+function sendRsvpEmail(){
+  const email=document.getElementById('rsvp-email').value.trim();
+  const name=document.getElementById('rsvp-name').value.trim();
+  if(!email){alert('Email requis');return;}
+  window.open(`mailto:radouane.abainagh@gmail.com?subject=${encodeURIComponent('RSVP – Mariage Assia & Radouane')}&body=${encodeURIComponent('Bonjour,\n\nJe confirme ma présence au mariage le 11 juillet 2026.\n\nNom : '+name+'\nEmail : '+email+'\n\nCordialement')}`);
+  document.getElementById('rsvp-msg').textContent=currentLang==='ar'?'سيُفتح تطبيق البريد.':currentLang==='en'?'Your email client will open.':"Votre client email va s'ouvrir.";
+}
+
+function goTo(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});}
+function toggleMenu(){document.getElementById('nav-links').classList.toggle('open');}
+function closeMenu(){document.getElementById('nav-links').classList.remove('open');}
+</script>
+</body>
+</html>
